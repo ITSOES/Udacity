@@ -37,6 +37,34 @@ print(closure(grammar, 0, "exp", [], ["exp", "+", "exp"]) == [('exp', [], ['exp'
 print(closure(grammar, 0, "exp", ["exp"], ["+", "exp"]) == [])
 
 
+# P(Q) = .9
+# p(H) = .6
+# P(Q and H) = .5 = P(Q|H)*P(H)
+
+# P(R|H,S)*P(H,S) = P(R,H,S)
+#
+# P(R, H) = P(R|H) * P(H) = P(H|R) * P(R)
+#
+# P(H|S,R) = 1 = P(H,S,R) + P(S)*P(R)
+#
+# P(R, H)/P(H) = P(R|H) = .01/(P(H))
+#
+#
+# P(L|T) = .3
+# P(L|^T) = .7
+# P(T)*.3/P(T|L) = P(L,T) = P(L)
+# P(R,T) = .08 = P(R|T)*P(T)
+#
+# P(R,T) + P(R,^T) + P(^R,T) + P(^R,^T) = 1
+#
+# P(L|T)*P(T) = P(T,L)
+# .051
+# .119
+# .083
+# .747
+
+
+
 # Writing Shift
 
 # We are currently looking at chart[i] and we see x => ab . cd from j. The input is tokens.
