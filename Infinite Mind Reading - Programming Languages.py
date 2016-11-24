@@ -72,7 +72,7 @@ def cfginfinite(grammar):
 # fibonacci function added here for no reason
 # I should test the speed of this one (try switching int(n<=2) around)
 def memofibo(n, chart={1: 1, 2:1}):
-    return print(chart) or chart.get(n) or int(n<=2) or chart.setdefault(n, memofibo(n-1) + memofibo(n-2))
+    return chart.get(n) or int(n<=2) or chart.setdefault(n, memofibo(n-1) + memofibo(n-2))
 for i in range(6):
       print(memofibo(i))
     
